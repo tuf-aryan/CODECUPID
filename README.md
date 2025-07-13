@@ -8,11 +8,12 @@ This repository is dedicated to practicing **backend development** while buildin
 ## 🚀 Project Goal
 
 The goal of this project is to learn and apply **backend development** concepts by:
-. Building a real-world server using Node.js and Express  
-. Connecting to a MongoDB database  
-. Creating RESTful APIs for CRUD operations  
-. Securing routes with middleware for authentication  
-. Integrating with a React frontend (planned in next steps)
+
+- Building a real-world server using Node.js and Express  
+- Connecting to a MongoDB database  
+- Creating RESTful APIs for CRUD operations  
+- Securing routes with middleware for authentication  
+- Integrating with a React frontend (planned in next steps)
 
 ---
 
@@ -28,34 +29,69 @@ The goal of this project is to learn and apply **backend development** concepts 
 
 ## 🏗️ Current Project Status
 
-. Setup Node.js and Express server  
-. Connect to MongoDB database  
-. Create REST APIs (GET, POST, PUT, DELETE)  
-. Implement basic middleware for authentication  
-
-
+- Setup Node.js and Express server  
+- Connect to MongoDB database  
+- Create REST APIs (GET, POST, PUT, DELETE)  
+- Implement basic middleware for authentication  
 
 ---
 
-## What I Learn Day by Day?
+# 📆 What I Learn Day by Day?
 
- # Express.js Routes Practice
-. 📚 Learning Note: Today I practiced the basics of Express.js, focusing on creating routes, using multiple route handlers, and understanding how  Express middleware works.
+## 📌 Express.js Routes Practice
 
- # 🚀 What I Learned
-. Setting up a basic Express server
-. Creating simple routes (GET, POST)
-. Passing multiple route handlers (middleware)
-. Sending responses in JSON or plain text
-. Understanding the next() function
+📚 **Learning Note:**  
+Today I practiced the basics of Express.js, focusing on creating routes, using multiple route handlers, and understanding how Express middleware works.
 
+---
 
- ## 📚 What is Middleware in Express?
+## 🚀 What I Learned
+
+- Setting up a basic Express server
+- Creating simple routes (GET, POST)
+- Passing multiple route handlers (middleware)
+- Sending responses in JSON or plain text
+- Understanding the `next()` function
+
+---
+
+## 📚 What is Middleware in Express?
 
 Middleware functions are functions that have access to the request object (`req`), the response object (`res`), and the `next` function in the application’s request-response cycle. These functions can:
 
-. Execute any code
-. Modify the `req` and `res` objects
-. End the request-response cycle
-. Call the next middleware in the stack
-. In this i practice the use of **Express.js middleware** to handle basic user authentication. Middleware is a core concept in Express and is widely used for logging, error handling, request parsing, and—importantly—**authorization and authentication**.
+- Execute any code
+- Modify the `req` and `res` objects
+- End the request-response cycle
+- Call the next middleware in the stack
+
+In this, I practiced the use of **Express.js middleware** to handle basic user authentication. Middleware is a core concept in Express and is widely used for logging, error handling, request parsing, and—importantly—**authorization and authentication**.
+
+---
+
+# 🛡️ Express.js Error Handling Practice
+
+This project demonstrates **error handling in Express.js**, focusing on:
+
+✅ Using `try/catch` in asynchronous controllers  
+✅ Centralized error-handling middleware  
+✅ Wildcard 404 "Not Found" route handling  
+
+It’s designed as a learning exercise for writing clean, robust, production-ready Express.js backends.
+
+---
+
+## 📚 Why Error Handling Matters
+
+Error handling is essential in web development. It:
+
+- Prevents server crashes
+- Sends meaningful error responses to clients
+- Helps with debugging
+- Improves security by controlling what info is exposed
+
+Express.js provides a powerful mechanism for **centralized error handling** using middleware.
+
+---
+
+## 🏗️ Project Structure
+
