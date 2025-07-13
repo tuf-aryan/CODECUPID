@@ -1,18 +1,28 @@
 const express = require("express");
+const { connectDb } = require("./config/dataBase");
+const User = require("./Models/user");
 
 const app = express();
-const { auth } = require("./middlewares/auth");
 
-app.use("/user",auth);
-
-app.get("/user/getData", (req, res) => {
-  res.send("use get data sucessfully");
+app.post("/signup", async (req, res) => {
+  const user = new User({
+    firstName: "ishow",
+    lastName: "Speed",
+    emailId: "ishow@gmail.com",
+    password: "ishwo@123",
+  });
+  await user.save();
+  res.send("user added sucessfully ");
 });
 
-app.get("/user/deleteData", (req, res) => {
-  res.send("delete all data sucessfully");
-});
+connectDb()
+  .then(() => {
+    console.log("connection is sucessfully istabilized");
 
-app.listen(3000, () => {
-  console.log("Server is sucessfully created");
-});
+    app.listen(3000, () => {
+      console.log("Server is sucessfully created");
+    });
+  })
+  .catch((err) => {
+    console.log("connection not sucessfully istabilized");
+  });

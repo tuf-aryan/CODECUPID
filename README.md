@@ -93,5 +93,15 @@ Express.js provides a powerful mechanism for **centralized error handling** usin
 
 ---
 
-## 🏗️ Project Structure
+# 🚀 Mongoose + MongoDB 
+
+This project documents my learning on how to:
+
+✅ Initialize Mongoose in a Node.js project  
+✅ Connect to a MongoDB Atlas cluster  
+✅ Create a schema and model  
+✅ Build a simple POST API to insert data into the database using Postman  
+✅ View and explore data using MongoDB Compass
+
+---
 
