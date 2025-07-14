@@ -3,16 +3,16 @@ const { connectDb } = require("./config/dataBase");
 const User = require("./Models/user");
 
 const app = express();
-
+app.use(express.json());
 app.post("/signup", async (req, res) => {
-  const user = new User({
-    firstName: "ishow",
-    lastName: "Speed",
-    emailId: "ishow@gmail.com",
-    password: "ishwo@123",
-  });
-  await user.save();
+  const user = new User(req.body);
+  
+  try{
+    await user.save();
   res.send("user added sucessfully ");
+  }catch{
+    res.status(400).send("user not added");
+  }
 });
 
 connectDb()

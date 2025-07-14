@@ -105,3 +105,17 @@ This project documents my learning on how to:
 
 ---
 
+# 🚀 Dynamic User Creation API
+
+This project demonstrates how to create a **dynamic user** object using Express.js, parse it with `express.json()` middleware, and test it with Postman.
+
+---
+
+## 📚 Features
+
+✅ Uses `express.json()` middleware to parse JSON requests  
+✅ POST endpoint to create a user dynamically  
+✅ GET endpoint to list all users  
+✅ Tested via Postman  
+
+---
