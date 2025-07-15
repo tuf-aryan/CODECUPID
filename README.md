@@ -154,3 +154,16 @@ This README describes what I learned about **fetching data** from a MongoDB data
 ---
 
 ⭐ In summary, I learned how to **get data from my database model** using Mongoose's `find()` to fetch many records and `findOne()` to fetch a single record.
+
+
+# 📌 Today What I Learn
+
+- How to update a user in MongoDB using Mongoose.
+- How to delete a user from the database.
+
+---
+
+## ✅ Use of `findByIdAndUpdate` and `findByIdAndDelete`
+
+- **findByIdAndUpdate**: Used to find a document by its ID and update its fields in one step.
+- **findByIdAndDelete**: Used to find a document by its ID and remove it from the database.

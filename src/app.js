@@ -38,6 +38,17 @@ app.get("/feed", async (req,res) => {
   }
 });
 
+app.delete('/user',async (req,res)=>{
+  const userId = req.body.userId;
+  try{
+    const user = await User.findByIdAndDelete(userId);
+    res.send("user suecessfully deleted")
+  }catch(err){
+    res.status(400).send("user not delte");
+  }
+})
+
+
 connectDb()
   .then(() => {
     console.log("connection is sucessfully istabilized");
