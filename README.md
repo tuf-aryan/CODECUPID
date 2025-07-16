@@ -167,3 +167,11 @@ This README describes what I learned about **fetching data** from a MongoDB data
 
 - **findByIdAndUpdate**: Used to find a document by its ID and update its fields in one step.
 - **findByIdAndDelete**: Used to find a document by its ID and remove it from the database.
+
+
+# Today I learn 
+
+- How to add validation in your schema's
+- How to add timestamps in your schema's
+- How to use Validate fxn and how to inable this validate in also update
+- use the trim ,min,minlength,max, maxlength,lowercase,default,required,uniqure and other's

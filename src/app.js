@@ -29,7 +29,7 @@ app.get("/user", async (req, res) => {
   }
 });
 
-app.get("/feed", async (req,res) => {
+app.get("/feed", async (req, res) => {
   try {
     const users = await User.find({});
     res.send(users);
@@ -38,16 +38,26 @@ app.get("/feed", async (req,res) => {
   }
 });
 
-app.delete('/user',async (req,res)=>{
+app.delete("/user", async (req, res) => {
   const userId = req.body.userId;
-  try{
+  try {
     const user = await User.findByIdAndDelete(userId);
-    res.send("user suecessfully deleted")
-  }catch(err){
+    res.send("user suecessfully deleted");
+  } catch (err) {
     res.status(400).send("user not delte");
   }
-})
+});
 
+app.patch("/user", async (req, res) => {
+  const userId = req.body.userId;
+  const data = req.body;
+  try {
+    await User.findByIdAndUpdate(userId, data, { runValidators: true });
+    res.send("User sucessfully Update");
+  } catch (err) {
+    res.status(400).send("Somthing went wrong");
+  }
+});
 
 connectDb()
   .then(() => {
