@@ -178,3 +178,7 @@ This README describes what I learned about **fetching data** from a MongoDB data
 - use How to do Api level data Sanitizaiton
 - Add validator library -npm i validator
 - Add so many validator in user schema ex-email,password,url
+- Install bcrypt pacakage
+- create passwordHash using bcrypt.hash & save the user with hash pass in db
+- create Login api
+- compare email and pass with db and login sucessfully
