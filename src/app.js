@@ -4,14 +4,15 @@ const User = require("./Models/user");
 
 const app = express();
 app.use(express.json());
+
 app.post("/signup", async (req, res) => {
   const user = new User(req.body);
 
   try {
     await user.save();
     res.send("user added sucessfully ");
-  } catch {
-    res.status(400).send("user not added");
+  } catch(err) {
+    res.status(400).send(err.message);
   }
 });
 
