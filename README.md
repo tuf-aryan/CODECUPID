@@ -182,3 +182,17 @@ This README describes what I learned about **fetching data** from a MongoDB data
 - create passwordHash using bcrypt.hash & save the user with hash pass in db
 - create Login api
 - compare email and pass with db and login sucessfully
+
+
+# Today I learn
+
+
+- Install cookie-parser
+- send dummy cookie to user
+- create get/profile api and check if you u get cokkie back
+- Install jsonwebtoken
+- In login Api After email and password validation ,create a JWT Token and send it to user  inside cookie
+-  read the cookie inside your profile and find the logged in user
+- userAuth middlware
+- Set the expire of JWT and cookies for 7 days
+- create userSchema method to get jwt token and compare password

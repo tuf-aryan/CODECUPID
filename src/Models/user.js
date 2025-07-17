@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
+const jwt = require('jsonwebtoken');
 
 const userShema = mongoose.Schema(
   {
@@ -25,11 +26,11 @@ const userShema = mongoose.Schema(
     password: {
       type: String,
       required: true,
-        validate(value){
-        if(!validator.isStrongPassword(value)){
+      validate(value) {
+        if (!validator.isStrongPassword(value)) {
           throw new Error("Pls enter the Strong Password");
         }
-      }
+      },
     },
     age: {
       type: Number,
@@ -63,6 +64,10 @@ const userShema = mongoose.Schema(
   },
   { timestamps: true }
 );
-
+userShema.methods.getJWT = async function(){
+  const user = this;
+  const token = await jwt.sign({_id:user._id},"CODE@CUPID",{expiresIn:"7d"})
+  return token;
+}
 const User = mongoose.model("User", userShema);
 module.exports = User;
