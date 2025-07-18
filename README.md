@@ -196,3 +196,8 @@ This README describes what I learned about **fetching data** from a MongoDB data
 - userAuth middlware
 - Set the expire of JWT and cookies for 7 days
 - create userSchema method to get jwt token and compare password
+
+
+# Today I learn
+
+- Do logical sepration of api using expressRouter
