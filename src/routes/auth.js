@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const User = require("../Models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -34,7 +34,9 @@ authRouter.post("/login", async (req, res) => {
       const token = await user.getJWT();
       console.log("token is ", token);
       //add token to the cooki e
-      res.cookie("token", token);
+      res.cookie("token", token, {
+        expires: new Date(Date.now() + 8 * 3600000),
+      });
       res.send("Login sucessfully");
     } else {
       throw new Error("Ivalid Credentials");
@@ -44,5 +46,11 @@ authRouter.post("/login", async (req, res) => {
   }
 });
 
+authRouter.post("/logout", async (req, res) => {
+  res.cookie("token", null, {
+    expires: new Date(Date.now()),
+  });
+  res.send("logout sucessfulyy ");
+});
 
 module.exports = authRouter;
