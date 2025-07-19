@@ -201,3 +201,7 @@ This README describes what I learned about **fetching data** from a MongoDB data
 # Today I learn
 
 - Do logical sepration of api using expressRouter
+- index in Mongoose 
+- compound index 
+- pre Schema method
+- learn about enum
