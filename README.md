@@ -205,3 +205,5 @@ This README describes what I learned about **fetching data** from a MongoDB data
 - compound index 
 - pre Schema method
 - learn about enum
+- ref and populate() use
+
